@@ -7,6 +7,9 @@
 body {
     min-height: 100vh;
 }
+ul li a span {
+    color: white;
+}
 a {
     text-decoration: none;
 }
