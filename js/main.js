@@ -53,7 +53,7 @@ $(document).ready(function () {
 	$('a[data-rel^=lightcase]').lightcase();
 
 	// Instantiate MixItUp
-	$('.portfolio-items').mixItUp({
+	$('.officials-items').mixItUp({
 		animation: {
 			duration: 300
 		}
