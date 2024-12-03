@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e3a2f; 
-    color: #ffffff; 
+    background-color: #1e3a2f;
+    color: #ffffff;
     margin: 0;
     padding: 20px;
 }
@@ -11,9 +11,9 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #2a4b3f; 
+    background-color: #2a4b3f;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -30,7 +30,7 @@ h1 {
     align-items: center;
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #3a5a4f; 
+    background-color: #3a5a4f;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -39,12 +39,12 @@ h1 {
 
 .file-preview {
     width: 100%;
-    max-width: 250px; 
+    max-width: 250px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    object-fit: cover; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
 }
 
 
@@ -56,8 +56,9 @@ h1 {
 }
 
 
-a, button {
-    background-color: #4caf50; 
+a,
+button {
+    background-color: #4caf50;
     color: #ffffff;
     border: none;
     padding: 10px 15px;
@@ -68,7 +69,8 @@ a, button {
     font-size: 0.9em;
 }
 
-a:hover, button:hover {
+a:hover,
+button:hover {
     background-color: #45a049;
 }
 
@@ -79,10 +81,11 @@ a:hover, button:hover {
     }
 
     .file-preview {
-        max-width: 200px; 
+        max-width: 200px;
     }
 
-    a, button {
-        font-size: 0.8em; 
+    a,
+    button {
+        font-size: 0.8em;
     }
 }

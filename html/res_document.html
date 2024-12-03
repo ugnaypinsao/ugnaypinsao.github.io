@@ -1,49 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resident File Access</title>
     <link rel="stylesheet" href="../css/res_document.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Available Forms</h1>
         <div id="file-list"></div>
     </div>
-
-    <script>
-        const fileList = JSON.parse(localStorage.getItem('uploadedFiles')) || [];
-
-        function displayFiles() {
-            const fileListContainer = document.getElementById('file-list');
-            fileListContainer.innerHTML = '';
-
-            if (fileList.length === 0) {
-                fileListContainer.innerHTML = '<p>No files available.</p>';
-            } else {
-                fileList.forEach((file) => {
-                    const fileItem = document.createElement('div');
-                    fileItem.className = 'file-item';
-                    fileItem.innerHTML = `
-                        <p>${file.name}</p>
-                        <a href="${file.url}" target="_blank" download>Download</a>
-                        <button onclick="printFile('${file.url}')">Print</button>
-                    `;
-                    fileListContainer.appendChild(fileItem);
-                });
-            }
-        }
-
-        function printFile(url) {
-            const printWindow = window.open(url, '_blank');
-            printWindow.addEventListener('load', () => {
-                printWindow.print();
-            });
-        }
-
-        // Display files on page load
-        displayFiles();
-    </script>
+    <script src="../js/res_document.js"></script>
 </body>
+
 </html>
