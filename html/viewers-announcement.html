@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="../css/viewers-announcement.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .viewer-section {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .announcement {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .announcement img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Announcements</h1>
+
+<div class="viewer-section">
+    <div id="viewerAnnouncements"></div>
+</div>
+
+<script>
+    function renderAnnouncements() {
+        const announcements = JSON.parse(localStorage.getItem('announcements')) || [];
+        const viewerDiv = document.getElementById('viewerAnnouncements');
+        viewerDiv.innerHTML = '';
+
+        announcements.forEach(announcement => {
+            const viewerCard = document.createElement('div');
+            viewerCard.className = 'announcement';
+
+            viewerCard.innerHTML = `
+                ${announcement.image ? `<img src="${announcement.image}" alt="Announcement Image">` : ''}
+                <h3>${announcement.title}</h3>
+                <p>${announcement.content}</p>
+            `;
+            viewerDiv.appendChild(viewerCard);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderAnnouncements);
+</script>
+
+</body>
+</html>
