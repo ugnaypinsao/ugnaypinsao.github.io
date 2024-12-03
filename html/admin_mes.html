@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Inbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .inbox-container {
+      width: 400px;
+      height: 600px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+    .inbox-header {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .message-list {
+      flex: 1;
+      overflow-y: auto;
+      border-bottom: 1px solid #ddd;
+    }
+    .message-item {
+      padding: 15px;
+      border-bottom: 1px solid #f0f0f0;
+      cursor: pointer;
+    }
+    .message-item:hover {
+      background: #f7f7f7;
+    }
+    .message-item span {
+      display: block;
+      font-weight: bold;
+      color: #333;
+    }
+    .message-detail {
+      flex: 1;
+      padding: 15px;
+      display: none; /* Hidden by default */
+    }
+    .message-detail h3 {
+      margin: 0 0 10px;
+    }
+    .inbox-footer {
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      gap: 10px;
+    }
+    .inbox-footer button {
+      flex: 1;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .inbox-footer button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="inbox-container">
+    <div class="inbox-header">Admin Inbox</div>
+    <div class="message-list" id="messageList">
+      <!-- Messages will be dynamically added here -->
+    </div>
+    <div class="message-detail" id="messageDetail">
+      <h3 id="messageSender"></h3>
+      <p id="messageText"></p>
+      <button onclick="closeDetail()">Back to Inbox</button>
+    </div>
+    <div class="inbox-footer">
+      <button onclick="clearMessages()">Clear Messages</button>
+    </div>
+  </div>
+
+  <script>
+    function loadMessages() {
+      const messages = JSON.parse(localStorage.getItem("messages")) || [];
+      const messageList = document.getElementById("messageList");
+      const messageDetail = document.getElementById("messageDetail");
+
+      // Hide detail view by default
+      messageDetail.style.display = "none";
+
+      if (messages.length === 0) {
+        messageList.innerHTML = "<p style='text-align: center;'>No messages yet.</p>";
+        return;
+      }
+
+      messageList.innerHTML = ""; // Clear existing messages
+      messages.forEach((msg, index) => {
+        const messageItem = document.createElement("div");
+        messageItem.classList.add("message-item");
+        messageItem.innerHTML = `
+          <span>${msg.from}</span>
+          <p>${msg.text.substring(0, 30)}...</p>
+        `;
+        messageItem.addEventListener("click", () => showDetail(msg));
+        messageList.appendChild(messageItem);
+      });
+    }
+
+    function showDetail(msg) {
+      const messageDetail = document.getElementById("messageDetail");
+      const messageList = document.getElementById("messageList");
+
+      document.getElementById("messageSender").textContent = `From: ${msg.from}`;
+      document.getElementById("messageText").textContent = msg.text;
+
+      // Show detail view and hide list
+      messageDetail.style.display = "block";
+      messageList.style.display = "none";
+    }
+
+    function closeDetail() {
+      const messageDetail = document.getElementById("messageDetail");
+      const messageList = document.getElementById("messageList");
+
+      // Show list and hide detail view
+      messageDetail.style.display = "none";
+      messageList.style.display = "block";
+    }
+
+    function clearMessages() {
+      if (confirm("Are you sure you want to clear all messages?")) {
+        localStorage.setItem("messages", JSON.stringify([]));
+        loadMessages();
+      }
+    }
+
+    // Load messages on page load
+    loadMessages();
+
+    // Check for new messages periodically
+    setInterval(() => {
+      const messages = JSON.parse(localStorage.getItem("messages")) || [];
+      const messageList = document.getElementById("messageList");
+
+      if (messages.length !== messageList.childElementCount) {
+        loadMessages();
+        alert("You have new messages!");
+      }
+    }, 3000);
+  </script>
+</body>
+</html>
