@@ -1,1 +1,5 @@
 "# ugnayPinsao" 
+made by
+        CARTUJANO, ORLAND JHAN
+        GONZALES, GYANNA HENYLIE
+        PACO, FRANCESCA YSABEL
