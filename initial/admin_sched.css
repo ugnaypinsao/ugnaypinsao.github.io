@@ -1,0 +1,50 @@
+body {
+    background-color: #a4b4a5;
+    color: #d1e7dd;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #050000;
+}
+
+#calendar {
+    margin-top: 20px;
+    background-color: #098e52;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.booking-item {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.booking-actions button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #085a15;
+}
+
+.booking-actions button:hover {
+    background-color: #6b1b1b;
+}
