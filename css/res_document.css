@@ -1,87 +1,92 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e3a2f;
-    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8; /* Light neutral background */
+    color: #333; /* Darker, readable text color */
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
-
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Bright, modern white container */
     padding: 20px;
-    background-color: #2a4b3f;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-h1 {
-    color: #e0ffcc;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.file-item {
+    box-sizing: border-box;
+    border-radius: 0; /* No border radius for full-page layout */
+    box-shadow: none; /* Remove shadow for edge-to-edge design */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+}
+
+h1 {
+    color: #31620e; 
+    text-align: center;
     margin-bottom: 20px;
-    padding: 15px;
-    background-color: #3a5a4f;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+.file-item {
+    width: 100%;
+    max-width: 600px; /* Set a max-width for better readability */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9fafc; /* Light card background */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-
 .file-preview {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     object-fit: cover;
 }
 
-
 .file-item p {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
     margin: 10px 0;
 }
 
-
 a,
 button {
-    background-color: #4caf50;
+    background-color: #2d7dd2; /* Blue button for emphasis */
     color: #ffffff;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     margin: 5px;
     font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 a:hover,
 button:hover {
-    background-color: #45a049;
+    background-color: #1866b4;
+    transform: scale(1.05);
 }
 
-/* Responsive Design */
+a:active,
+button:active {
+    transform: scale(0.95);
+}
+
 @media (max-width: 768px) {
     .file-item {
-        padding: 10px;
+        padding: 15px;
     }
 
     .file-preview {
-        max-width: 200px;
+        max-width: 200px; /* Adjust for smaller screens */
     }
 
     a,

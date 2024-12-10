@@ -1,50 +1,118 @@
+/* General Styles */
 body {
-    background-color: #a4b4a5;
-    color: #d1e7dd;
-    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Soft off-white background for a calm feel */
+    color: #4a4a4a; /* Dark gray text for better readability */
+    font-family: 'Inter', sans-serif; /* Clean, modern font */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Container */
 .container {
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 900px;
+    background-color: #ffffff; /* White background for content */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
 }
 
+/* Headings */
 h1, h2 {
-    color: #050000;
+    color: #2e3b2d; /* Darker, earthy green for a natural feel */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    color: #5e8d56; /* Softer, muted green for section headings */
+}
+
+/* Calendar */
 #calendar {
-    margin-top: 20px;
-    background-color: #098e52;
-    border-radius: 8px;
-    padding: 10px;
+    margin-top: 30px;
+    background-color: #e0f1e0; /* Light pastel green for a subtle background */
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
+/* Booking Items */
 .booking-item {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
+    background-color: #ffffff; /* White background for items */
+    color: #4a4a4a; /* Dark gray text */
+    border: 1px solid #e0e0e0; /* Soft light gray border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.booking-item:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+/* Booking Actions */
 .booking-actions button {
-    margin: 5px;
-    padding: 8px 12px;
+    margin: 10px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    color: #ffffff;
-    background-color: #085a15;
+    color: #fff;
+    background-color: #6f9e6e; /* Muted green for actions */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
 }
 
 .booking-actions button:hover {
-    background-color: #6b1b1b;
+    background-color: #4CAF50; /* Subtle hover effect with a fresh green */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+.booking-actions button:active {
+    background-color: #45a049;
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    #calendar {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .booking-item {
+        padding: 15px;
+    }
+
+    .booking-actions button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }

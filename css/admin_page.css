@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,70 +6,59 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body Styling */
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #e7e7e7; /* Light background */
+    color: #333; /* Dark gray text for readability */
 }
 
-ul li a span {
-    color: white;
-}
-
+/* Link Styling */
 a {
     text-decoration: none;
 }
 
-li {
-    list-style: none;
-}
-
+/* Header Styling */
 h1,
 h2 {
     color: white;
 }
 
 h3 {
-    color: #999;
+    color: #444; /* Slightly lighter gray */
 }
 
+/* Button Styling */
 .btn {
-    background: darkgreen;
+    background: #31620e;
+    padding: 10px 20px;
     color: white;
-    padding: 5px 10px;
     text-align: center;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    color: darkgreen;
-    background: white;
-    padding: 3px 8px;
-    border: 2px solid darkgreen;
+    background: #427c15;
+    color: white;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px 10px;
-    border-bottom: 2px solid #999;
-}
-
-table {
-    padding: 10px;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
-}
-
+/* Side Menu Styling */
 .side-menu {
     position: fixed;
-    background: darkgreen;
-    width: 20vw;
-    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #31620e; /* Dark green background for the side menu */
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 .side-menu .brand-name {
@@ -76,204 +66,218 @@ td {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between list items */
 }
 
 .side-menu li {
-    font-size: 24px;
-    padding: 10px 40px;
+    font-size: 18px;
+    padding: 12px 20px;
     color: white;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .side-menu li:hover {
-    background: white;
-    color: darkgreen;
+    background: #427c15;
+    border-radius: 10px;
 }
 
+.side-menu li a {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Container Styling */
 .container {
-    position: absolute;
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background: #f1f1f1;
+    margin-left: 260px; /* Adjusted to align with side menu */
+    width: calc(100% - 260px);
+    background-color: #e7e7e7; /* White background for the content area */
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Top padding to account for the header */
 }
 
+/* Header Styles */
 .container .header {
     position: fixed;
     top: 0;
+    left: 250px;
     right: 0;
-    width: 80vw;
-    height: 10vh;
-    background: white;
+    height: 60px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    margin-left: 0; /* Ensure no gap between side panel and header */
 }
 
 .container .header .nav {
-    width: 90%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.container .header .nav .search {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-}
-
-.container .header .nav .search input[type=text] {
-    border: none;
-    background: #f1f1f1;
+.container .header .nav .search input[type="text"] {
+    border: 1px solid #ccc;
     padding: 10px;
-    width: 50%;
+    width: 100dp; /* Longer width for the search bar */
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    margin-right: 10px; /* Space between search bar and the button */
 }
 
 .container .header .nav .search button {
-    width: 40px;
-    height: 40px;
+    background-color: transparent;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
 }
 
-.container .header .nav .search button img {
-    width: 30px;
-    height: 30px;
-}
-
+/* User Profile */
 .container .header .nav .user {
-    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .container .header .nav .user img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
-.container .header .nav .user .img-case {
-    position: relative;
-    width: 50px;
-    height: 50px;
+.container .header .nav .user .btn {
+    margin-left: 15px;
 }
 
-.container .header .nav .user .img-case img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
+/* Content Area */
 .container .content {
-    position: relative;
-    margin-top: 10vh;
-    min-height: 90vh;
-    background: #f1f1f1;
+    margin-top: 60px; /* Padding from the fixed header */
+    padding: 30px;
+    background-color: #e7e7e7; /* Soft background for content */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* Cards Styling */
 .container .content .cards {
-    padding: 20px 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
 }
 
+/* Adjusted card heights */
 .container .content .cards .card {
-    width: 250px;
-    height: 150px;
-    background: white;
-    margin: 20px 10px;
+    width: 220px;
+    height: 130px; /* Smaller height for cards */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin: 10px;
 }
 
-.container .content .content-2 {
-    min-height: 60vh;
+.container .content .cards .card:hover {
+    transform: scale(1.05);
+}
+
+.container .content .cards .card h3 {
+    color: #333;
+    margin-bottom: 10px; /* Margin added for spacing */
+}
+
+.container .content .cards .card .icon-case {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.container .content .content-2 .recent-payments {
-    min-height: 50vh;
-    flex: 5;
-    background: white;
-    margin: 0 25px 25px 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-}
-
-.container .content .content-2 .new-students {
-    flex: 2;
-    background: white;
-    min-height: 50vh;
-    margin: 0 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-}
-
-.container .content .content-2 .new-students table td:nth-child(1) img {
-    height: 40px;
+.container .content .cards .card .icon-case img {
     width: 40px;
+    height: 40px;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For screens 1050px and below */
 @media screen and (max-width: 1050px) {
-    .side-menu li {
-        font-size: 18px;
+    .side-menu {
+        width: 220px;
+    }
+
+    .container {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+
+    .container .header .nav .search input[type="text"] {
+        width: 45%;
     }
 }
 
+/* For screens 940px and below */
 @media screen and (max-width: 940px) {
+    .side-menu {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
     .side-menu li span {
         display: none;
-    }
-
-    .side-menu {
-        align-items: center;
     }
 
     .side-menu li img {
         width: 40px;
         height: 40px;
     }
-
-    .side-menu li:hover {
-        background: darkgreen;
-        padding: 8px 38px;
-        border: 2px solid white;
-    }
 }
 
-@media screen and (max-width:536px) {
-    .brand-name h1 {
-        font-size: 16px;
+/* For smaller screens, below 536px */
+@media screen and (max-width: 536px) {
+    .side-menu {
+        width: 180px;
+    }
+
+    .container {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .container .content {
+        padding: 15px;
     }
 
     .container .content .cards {
         justify-content: center;
-    }
-
-    .side-menu li img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .container .content .content-2 .recent-payments table th:nth-child(2),
-    .container .content .content-2 .recent-payments table td:nth-child(2) {
-        display: none;
     }
 }

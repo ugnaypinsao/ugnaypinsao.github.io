@@ -1,58 +1,125 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e3a2f;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    background-color: #f7f9fc; /* Light, soft grayish-blue background */
+    color: #333; /* Dark gray text for better readability */
     margin: 0;
     padding: 20px;
 }
 
+/* Container Styles */
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #2a4b3f;
-    border-radius: 8px;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the main content */
+    border-radius: 12px; /* Rounded corners for modern aesthetics */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-h1,
-h2 {
-    color: #e0ffcc;
+/* Headings */
+h1, h2 {
+    color: #4CAF50; /* Muted green for titles */
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
 }
 
+/* Form Styles */
 form {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 600;
+    color: #555; /* Slightly lighter color for the label */
 }
 
 input[type="file"] {
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid #ddd; /* Light border for input */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light gray background for the file input */
+    color: #333; /* Ensure text in the file input is readable */
 }
 
+input[type="file"]:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight border color on focus */
+}
+
+/* Button Styles */
 button {
-    background-color: #4caf50;
-    color: #ffffff;
+    background-color: #4CAF50; /* Soft green background */
+    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green on hover */
 }
 
+button:active {
+    background-color: #387c39; /* Even darker green on click */
+}
+
+/* File List Styles */
 .file-item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #3a5a4f;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #f4f7f6; /* Soft off-white background for each item */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for the file items */
+}
+
+.file-item span {
+    color: #333; /* Dark gray for the file name */
+}
+
+.file-item button {
+    background-color: #ff5722; /* Soft red for delete button */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.file-item button:hover {
+    background-color: #e64a19; /* Darker red on hover */
+}
+
+.file-item button:active {
+    background-color: #d84315; /* Even darker red on click */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="file"] {
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
 }

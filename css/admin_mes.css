@@ -1,84 +1,117 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f4f7fb; /* Soft, light gray-blue background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333; /* Dark gray text for readability */
 }
 
+/* Inbox Container */
 .inbox-container {
-    width: 400px;
-    height: 600px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px; /* Limited width for better readability */
+    height: 650px;
+    background: #ffffff; /* Clean white background for content */
+    border-radius: 12px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     display: flex;
     flex-direction: column;
 }
 
+/* Inbox Header */
 .inbox-header {
-    background: #007bff;
-    color: white;
-    padding: 15px;
-    border-radius: 8px 8px 0 0;
+    background: #6c7c88; /* Muted blue-gray background */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
 }
 
+/* Message List */
 .message-list {
     flex: 1;
     overflow-y: auto;
-    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fafafa; /* Light gray background for message list */
+    border-bottom: 1px solid #e0e0e0; /* Light border */
 }
 
 .message-item {
     padding: 15px;
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .message-item:hover {
-    background: #f7f7f7;
+    background: #f0f0f0; /* Light hover effect */
 }
 
 .message-item span {
     display: block;
-    font-weight: bold;
-    color: #333;
+    font-weight: 600;
+    color: #4a4a4a; /* Slightly darker gray for sender name */
 }
 
+.message-item p {
+    color: #666; /* Lighter gray for message preview */
+    font-size: 0.95rem;
+}
+
+/* Message Detail */
 .message-detail {
     flex: 1;
-    padding: 15px;
-    display: none;
-    /* Hidden by default */
+    padding: 20px;
+    background-color: #f9f9f9; /* Soft gray background */
+    display: none; /* Hidden by default */
 }
 
 .message-detail h3 {
     margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #333;
 }
 
+.message-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter text color for message body */
+}
+
+/* Footer Section */
 .inbox-footer {
-    padding: 10px;
-    border-top: 1px solid #ddd;
+    padding: 12px;
+    background-color: #f7f7f7; /* Soft light gray background */
+    border-top: 1px solid #e0e0e0; /* Light border on top */
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
 }
 
 .inbox-footer button {
-    flex: 1;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
+    padding: 10px 20px;
+    background-color: #28a745; /* Muted green */
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .inbox-footer button:hover {
-    background-color: #218838;
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Subtle scale effect */
+}
+
+.inbox-footer button:active {
+    background-color: #1e7e34; /* Even darker green on active */
+    transform: scale(0.98); /* Shrink slightly when clicked */
 }

@@ -1,8 +1,8 @@
 /* General styles */
 body {
-    background-color: #1a3022; /* Slightly softer green for viewer background */
-    color: #ffffff; /* White text */
-    font-family: 'Georgia', serif;
+    background-color: #1f381a; /* Dark green background for the page */
+    color: #f0f6f0; /* Light, soft text color */
+    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
     margin: 0;
     padding: 0;
     line-height: 1.8;
@@ -10,16 +10,19 @@ body {
 
 /* Headings */
 h1 {
-    color: #a3d8a3; /* Softer green for main heading */
+    color: #ffffff; /* Lighter green for the main heading */
     text-align: center;
-    margin: 30px 0;
-    font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+    margin: 40px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 h2 {
-    color: #c7e2c7; /* Light green for section headings */
+    color: #e9ffe2; /* Softer green for section headings */
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 /* Containers */
@@ -27,19 +30,21 @@ h2 {
     margin: 20px auto;
     max-width: 800px;
     padding: 30px;
-    background-color: #24382a; /* Slightly darker green for section background */
+    background-color: #284d25; /* Subtle dark green for section background */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #dff7e0; /* Soft greenish-white text */
 }
 
 /* Announcement cards */
 .announcement {
-    border: 1px solid #567f67; /* Soft green border */
+    border: 1px solid #cccccc; /* Light gray border */
     padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    background-color: #2d4737; /* Darker green for announcement background */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #eef7e2; /* Neutral white background */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    color: #333333; /* Dark text for readability */
 }
 
 .announcement img {
@@ -47,26 +52,58 @@ h2 {
     height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .announcement h3 {
-    color: #a3d8a3; /* Light green for announcement titles */
+    color: #31620e; /* Dark green for announcement titles */
+    text-align: center; /* Centered titles */
     margin-bottom: 10px;
-    font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .announcement p {
-    color: #cde8cd; /* Softer white-green for announcement content */
+    color: #555555; /* Medium gray for content */
     font-size: 1.1rem;
     margin-bottom: 0;
 }
 
-/* Miscellaneous */
+/* Links */
 a {
-    color: #a3d8a3; /* Links in green */
+    color: #31620e; /* Links in a dark green */
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #4e8c4e; /* Slightly brighter green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .viewer-section {
+        padding: 20px;
+    }
+
+    .announcement {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .announcement h3 {
+        font-size: 1.3rem;
+    }
+
+    .announcement p {
+        font-size: 1rem;
+    }
 }

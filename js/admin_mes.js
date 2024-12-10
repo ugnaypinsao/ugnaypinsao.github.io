@@ -58,10 +58,13 @@ loadMessages();
 // Check for new messages periodically
 setInterval(() => {
     const messages = JSON.parse(localStorage.getItem("messages")) || [];
-    const messageList = document.getElementById("messageList");
-
-    if (messages.length !== messageList.childElementCount) {
+    const lastMessageCount = localStorage.getItem("lastMessageCount") || 0;
+    
+    // Check if the number of messages has increased
+    if (messages.length > lastMessageCount) {
         loadMessages();
         alert("You have new messages!");
+        // Update the last message count
+        localStorage.setItem("lastMessageCount", messages.length);
     }
 }, 3000);

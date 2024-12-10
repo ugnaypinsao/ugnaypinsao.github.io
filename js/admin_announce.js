@@ -1,3 +1,4 @@
+
 let announcements = JSON.parse(localStorage.getItem('announcements')) || [];
 
 function addAnnouncement() {
