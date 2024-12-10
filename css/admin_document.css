@@ -1,8 +1,8 @@
 /* General Body Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Clean, modern font */
-    background-color: #f7f9fc; /* Light, soft grayish-blue background */
-    color: #333; /* Dark gray text for better readability */
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f7f9fc; 
+    color: #333; 
     margin: 0;
     padding: 20px;
 }
@@ -12,14 +12,14 @@ body {
     max-width: 850px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #ffffff; /* White background for the main content */
-    border-radius: 12px; /* Rounded corners for modern aesthetics */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 /* Headings */
 h1, h2 {
-    color: #4CAF50; /* Muted green for titles */
+    color: #4CAF50; 
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
@@ -35,26 +35,26 @@ label {
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
-    color: #555; /* Slightly lighter color for the label */
+    color: #555; 
 }
 
 input[type="file"] {
     margin-bottom: 20px;
     padding: 12px;
-    border: 2px solid #ddd; /* Light border for input */
+    border: 2px solid #ddd; 
     border-radius: 8px;
-    background-color: #f9f9f9; /* Light gray background for the file input */
-    color: #333; /* Ensure text in the file input is readable */
+    background-color: #f9f9f9; 
+    color: #333; 
 }
 
 input[type="file"]:focus {
     outline: none;
-    border-color: #4CAF50; /* Highlight border color on focus */
+    border-color: #4CAF50; 
 }
 
 /* Button Styles */
 button {
-    background-color: #4CAF50; /* Soft green background */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     padding: 12px 20px;
@@ -65,12 +65,11 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
 }
 
 button:active {
-    background-color: #387c39; /* Even darker green on click */
-}
+    background-color: #387c39; 
 
 /* File List Styles */
 .file-item {
@@ -78,17 +77,17 @@ button:active {
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 12px;
-    background-color: #f4f7f6; /* Soft off-white background for each item */
+    background-color: #f4f7f6; 
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for the file items */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
 }
 
 .file-item span {
-    color: #333; /* Dark gray for the file name */
+    color: #333; 
 }
 
 .file-item button {
-    background-color: #ff5722; /* Soft red for delete button */
+    background-color: #ff5722; 
     color: white;
     padding: 8px 12px;
     border: none;
@@ -97,11 +96,11 @@ button:active {
 }
 
 .file-item button:hover {
-    background-color: #e64a19; /* Darker red on hover */
+    background-color: #e64a19; 
 }
 
 .file-item button:active {
-    background-color: #d84315; /* Even darker red on click */
+    background-color: #d84315; 
 }
 
 /* Responsiveness */

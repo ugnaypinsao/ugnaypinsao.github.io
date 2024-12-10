@@ -1,8 +1,8 @@
 /* General Styles */
 body {
-    background-color: #f9f9f9; /* Soft off-white background for a calm feel */
-    color: #4a4a4a; /* Dark gray text for better readability */
-    font-family: 'Inter', sans-serif; /* Clean, modern font */
+    background-color: #f9f9f9; 
+    color: #4a4a4a; 
+    font-family: 'Inter', sans-serif; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -12,15 +12,15 @@ body {
 .container {
     margin: 40px auto;
     max-width: 900px;
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff; 
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); 
 }
 
 /* Headings */
 h1, h2 {
-    color: #2e3b2d; /* Darker, earthy green for a natural feel */
+    color: #2e3b2d; 
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
@@ -32,13 +32,13 @@ h1 {
 
 h2 {
     font-size: 1.7rem;
-    color: #5e8d56; /* Softer, muted green for section headings */
+    color: #5e8d56; 
 }
 
 /* Calendar */
 #calendar {
     margin-top: 30px;
-    background-color: #e0f1e0; /* Light pastel green for a subtle background */
+    background-color: #e0f1e0; 
     border-radius: 10px;
     padding: 20px;
     color: #333;
@@ -48,19 +48,19 @@ h2 {
 
 /* Booking Items */
 .booking-item {
-    background-color: #ffffff; /* White background for items */
-    color: #4a4a4a; /* Dark gray text */
-    border: 1px solid #e0e0e0; /* Soft light gray border */
+    background-color: #ffffff; 
+    color: #4a4a4a; 
+    border: 1px solid #e0e0e0; 
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .booking-item:hover {
-    transform: translateY(-5px); /* Hover effect */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
 }
 
 /* Booking Actions */
@@ -71,15 +71,15 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     color: #fff;
-    background-color: #6f9e6e; /* Muted green for actions */
+    background-color: #6f9e6e;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 1rem;
 }
 
 .booking-actions button:hover {
-    background-color: #4CAF50; /* Subtle hover effect with a fresh green */
-    transform: scale(1.05); /* Slight scale effect */
+    background-color: #4CAF50; 
+    transform: scale(1.05); 
 }
 
 .booking-actions button:active {

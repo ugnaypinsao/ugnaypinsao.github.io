@@ -1,8 +1,8 @@
 /* General styles */
 body {
-    background-color: #1f381a; /* Dark green background for the page */
-    color: #f0f6f0; /* Light, soft text color */
-    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
+    background-color: #1f381a; 
+    color: #f0f6f0; 
+    font-family: 'Poppins', sans-serif; 
     margin: 0;
     padding: 0;
     line-height: 1.8;
@@ -10,7 +10,7 @@ body {
 
 /* Headings */
 h1 {
-    color: #ffffff; /* Lighter green for the main heading */
+    color: #ffffff; 
     text-align: center;
     margin: 40px 0;
     font-size: 2.5rem;
@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-    color: #e9ffe2; /* Softer green for section headings */
+    color: #e9ffe2; 
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.8rem;
@@ -30,21 +30,21 @@ h2 {
     margin: 20px auto;
     max-width: 800px;
     padding: 30px;
-    background-color: #284d25; /* Subtle dark green for section background */
+    background-color: #284d25; 
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #dff7e0; /* Soft greenish-white text */
+    color: #dff7e0; 
 }
 
 /* Announcement cards */
 .announcement {
-    border: 1px solid #cccccc; /* Light gray border */
+    border: 1px solid #cccccc; 
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #eef7e2; /* Neutral white background */
+    background-color: #eef7e2; 
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    color: #333333; /* Dark text for readability */
+    color: #333333; 
 }
 
 .announcement img {
@@ -56,29 +56,29 @@ h2 {
 }
 
 .announcement h3 {
-    color: #31620e; /* Dark green for announcement titles */
-    text-align: center; /* Centered titles */
+    color: #31620e; 
+    text-align: center; 
     margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .announcement p {
-    color: #555555; /* Medium gray for content */
+    color: #555555; 
     font-size: 1.1rem;
     margin-bottom: 0;
 }
 
 /* Links */
 a {
-    color: #31620e; /* Links in a dark green */
+    color: #31620e; 
     text-decoration: none;
     font-weight: 500;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #4e8c4e; /* Slightly brighter green on hover */
+    color: #4e8c4e; 
 }
 
 /* Responsive Design */
