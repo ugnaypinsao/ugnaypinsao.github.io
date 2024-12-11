@@ -163,7 +163,7 @@ h6 {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
@@ -191,7 +191,7 @@ h6 {
 
 .service-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 10px rgba(120, 255, 102, 0.685);
 }
 
 .service-item h3 {
