@@ -115,3 +115,52 @@ body {
     background-color: #1e7e34; 
     transform: scale(0.98); 
 }
+/* Add these styles to your existing CSS */
+
+.message-item.unread {
+    background-color: #e3f2fd; /* Light blue background for unread messages */
+}
+
+.message-item .message-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message-item .message-info span {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.message-item .message-info .message-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.message-item p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Unread message style */
+.message-item.unread {
+    font-weight: bold;
+    background-color: #c0d8ee; /* Light blue background for unread messages */
+}
+
+/* Unread mark (dot) */
+.unread-mark {
+    color: #ff0000; /* Red dot for unread messages */
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+/* Timestamp styling */
+small {
+    display: block;
+    color: #777;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
