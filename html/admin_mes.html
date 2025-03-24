@@ -17,11 +17,11 @@
     <div class="message-detail" id="messageDetail">
       <h3 id="messageSender"></h3>
       <p id="messageText"></p>
-      <small id="messageTimestamp"></small> <!-- Added timestamp -->
-      <button onclick="closeDetail()">Back to Inbox</button>
-  </div>
-    <div class="inbox-footer">
-      <button onclick="clearMessages()">Clear Messages</button>
+      <small id="messageTimestamp"></small>
+      <div class="detail-buttons">
+        <button onclick="closeDetail()">Back to Inbox</button>
+        <button onclick="deleteMessage()">Delete Message</button> <!-- Delete button -->
+      </div>
     </div>
   </div>
   <script src="../js/admin_mes.js"></script>

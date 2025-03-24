@@ -1,3 +1,5 @@
+let currentMessage = null; // Store the currently viewed message
+
 function loadMessages() {
     const messages = JSON.parse(localStorage.getItem("messages")) || [];
     const messageList = document.getElementById("messageList");
@@ -62,6 +64,9 @@ function showDetail(msg) {
     const messageDetail = document.getElementById("messageDetail");
     const messageList = document.getElementById("messageList");
 
+    // Store the currently viewed message
+    currentMessage = msg;
+
     // Format the timestamp
     const formattedTimestamp = msg.timestamp
         ? new Date(msg.timestamp).toLocaleString()
@@ -88,10 +93,16 @@ function closeDetail() {
     loadMessages();
 }
 
-function clearMessages() {
-    if (confirm("Are you sure you want to clear all messages?")) {
-        localStorage.setItem("messages", JSON.stringify([]));
-        loadMessages();
+function deleteMessage() {
+    if (!currentMessage) return;
+
+    if (confirm("Are you sure you want to delete this message?")) {
+        const messages = JSON.parse(localStorage.getItem("messages")) || [];
+        const updatedMessages = messages.filter(
+            m => m.text !== currentMessage.text || m.from !== currentMessage.from
+        );
+        localStorage.setItem("messages", JSON.stringify(updatedMessages));
+        closeDetail(); // Return to the inbox after deletion
     }
 }
 
